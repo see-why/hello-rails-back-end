@@ -13,6 +13,7 @@ An api that returns a random greeting message each time you call it.
 - **Ensure you have postgresql, nodejs, ruby and rails set up on your machine**
 - **To get a local copy of the repository please run the following commands on your terminal:**
 - **$ git clone https://github.com/see-why/hello-rails-back-end.git**
+- **$ to test or consume the api you can git clone a react [front end](https://github.com/see-why/hello-react-front-end.git) and set up locally**
 - **$ run `bundle install` to couple all dependacies in gem files**
 - **$ run `npm install` to couple all dependacies in package.json files**
 - **$ run `rails s` to start rails server**
