@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # spec/integration/greetings_spec.rb
 require 'swagger_helper'
 
