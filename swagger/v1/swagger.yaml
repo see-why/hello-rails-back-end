@@ -1,0 +1,44 @@
+---
+openapi: 3.0.1
+info:
+  title: API V1
+  version: v1
+paths:
+  "/api/v1/random":
+    get:
+      summary: Retrieves a random message
+      tags:
+      - Pets
+      parameters:
+      - name: message
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: message found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                - message
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                required:
+                - message
+        '404':
+          description: message not found
+servers:
+- url: https://{defaultHost}
+  variables:
+    defaultHost:
+      default: www.example.com
