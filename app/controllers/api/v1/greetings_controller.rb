@@ -12,6 +12,25 @@ module Api
           message: @greeting.message.to_s
         }.to_json
       end
+
+      def add
+        @new_message = Greeting.new(greeting_params)
+        if @new_message.save
+          render json: {
+            message: 'Successfully added'
+          }.to_json
+        else
+          render json: {
+            message: 'Save failed'
+          }.to_json
+        end
+      end
+
+      private
+
+      def greeting_params
+        params.permit(:message)
+      end
     end
   end
 end
